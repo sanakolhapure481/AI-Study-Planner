@@ -1,16 +1,117 @@
-# React + Vite
+# 🤖 AI Study Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An AI-powered full-stack web application that helps students manage subjects, organize study tasks, create study schedules, track progress, and receive personalized study recommendations using Gemini AI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Problem Statement
 
-## React Compiler
+Students often find it difficult to organize their subjects, manage study tasks, set priorities, follow a study schedule, and track their study progress.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The AI Study Planner provides a simple platform where students can manage their academic tasks and receive AI-based study recommendations according to their tasks, priorities, dates, and completion status.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🎯 Assigned Feature Set
+
+### Feature Set B
+
+The project implements the following required features:
+
+- Add, edit, and delete subjects and tasks
+- Set priority for tasks
+- Set study schedule
+- Track completed and pending tasks
+- Display study progress
+
+---
+
+## ✅ Implemented Features
+
+### 🔐 Authentication
+- Student registration
+- Student login
+- Logout
+- Protected application routes
+- Firebase Authentication
+
+### 📚 Subject Management
+- Add subjects
+- Edit subjects
+- Delete subjects
+- Store subjects in Cloud Firestore
+
+### 📝 Task Management
+- Add study tasks
+- Edit study tasks
+- Delete study tasks
+- Assign tasks to subjects
+- Set task priority
+- Set study date
+- Set start and end time
+- Mark tasks as completed or pending
+
+### 📅 Study Schedule
+- Display scheduled study tasks
+- Show study date and time
+- Display task priority
+- Show completed/pending status
+
+### 📊 Dashboard
+- Total subjects
+- Total tasks
+- Completed tasks
+- Pending tasks
+- Overall completion percentage
+- Today's scheduled tasks
+
+### 🤖 AI Study Recommendations
+- Uses Gemini AI
+- Analyzes current study tasks
+- Considers task priority
+- Considers study dates and times
+- Considers completed and pending tasks
+- Generates a personalized study plan
+- Provides study tips and break suggestions
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
+
+### Backend Services
+- Firebase Authentication
+- Cloud Firestore
+
+### AI
+- Google Gemini API
+- `@google/genai`
+
+### Development Tools
+- Visual Studio Code
+- Git
+- GitHub
+- Google Antigravity
+- ChatGPT
+
+---
+
+## 🏗️ Application Architecture
+
+```text
+                    AI Study Planner
+                           |
+              +------------+------------+
+              |                         |
+        React + Vite              Gemini AI
+              |                         |
+       Firebase SDK              Gemini API
+              |
+       +------+------+
+       |             |
+ Firebase Auth   Firestore
